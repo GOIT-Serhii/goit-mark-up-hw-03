@@ -46,6 +46,9 @@ p {
         line-height: 150%;
         letter-spacing: 0.02em;
 }
+img {
+    display: block;
+}
 
 .container {
     max-width: 1158px;
@@ -76,7 +79,6 @@ p {
 
 .header-navigation {
     display: flex;
-    gap: 76px;
     align-items: center;
 }
 
@@ -89,6 +91,7 @@ font-family: "Raleway", sans-serif;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4D5AE5;
+    margin-right: 76px;
 }
 
 .header-logo-item {
@@ -170,12 +173,14 @@ section {
     color: #FFFFFF;
     background-color: #4D5AE5;
     cursor: pointer;
-    width: 169px;
+    min-width: 169px;
     height: 56px;
     margin-right: auto;
     margin-left: auto;
     display: block;
     margin-top: 48px;
+    border: none;
+    border-radius: 4px;
 }
 .hero-button:hover, .hero-button:focus {
     background-color: #404BBF;
@@ -203,7 +208,7 @@ section {
 }
 
 .features-list-item {
-
+    width: calc((100% - 72px) / 4);
 }
 
 .features-subtitle {
@@ -246,13 +251,16 @@ section {
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     border-radius: 0 0 4px 4px;
     padding: 0px 0px 32px 0px;
-    width: 264px;
-        height: 380px;
+    width: calc((100% - 72px) / 4);
+    height: 380px;
+}
+
+.team-text-container {
+    padding: 32px 0;
 }
 
 .team-subtitle {
     text-align: center;
-    margin-top: 32px;
     margin-bottom: 8px;
 }
 
@@ -266,7 +274,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     flex-basis: 360px;
-    gap: 24px;
+    row-gap: 24px;
 }
 
 
@@ -285,31 +293,38 @@ section {
 .portfolio-list-item {
     padding-bottom: 32px;
     border: 1px solid #e7e9fc;
+    border-top: none;
     margin-top: 48px;
-    width: 360px;
+    width: calc((100% - 48px) / 3);
+}
+
+.portfolio-text-container {
+    padding: 32px 16px;
 }
 
 .portfolio-subtitle {
     margin-top: 32px;
     margin-bottom: 8px;
-    margin-right: 16px;
-    padding-left: 16px;
 }
 .portfolio-text {
-    padding-left: 16px;
+    
 }
 
 
 
 /* Footer */
 
-.footer-wrap {
-padding-top: 100px;
-padding-bottom: 100px;
-}
+.footer-wrap {}
+
 
 .footer {
     background-color: #2E2F42;
+    padding: 100px 0;
+}
+
+footer .logo {
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
 .footer-logo-item {
@@ -326,7 +341,6 @@ padding-bottom: 100px;
     line-height: 150%;
     letter-spacing: 0.02em;
     color: #F4F4FD;
-    margin-top: 16px;
     width: 264px;
 }
 
