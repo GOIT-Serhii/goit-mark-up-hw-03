@@ -274,7 +274,8 @@ section {
     display: flex;
     flex-wrap: wrap;
     flex-basis: 360px;
-    row-gap: 24px;
+    row-gap: 48px;
+    column-gap: 24px;
 }
 
 
