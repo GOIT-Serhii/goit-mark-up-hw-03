@@ -2,10 +2,23 @@ body {
     font-family: "Roboto", sans-serif;
     background-color: #FFFFFF;
     color: #434455;
+
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, p {
+    margin-bottom: 0;
+    margin-top: 0;
 }
 
 ul {
-   list-style: none;
+    list-style: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-left: 0;
 }
 
 
@@ -13,21 +26,19 @@ a {
     text-decoration: none;
 }
 h1 {
-    
-        font-weight: 700;
-        font-size: 56px;
-        line-height: 107%;
-        letter-spacing: 0.02em;
-        text-align: center;
-        color: #FFFFFF;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 107%;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #FFFFFF;
 }
 h3 {
-   
-        font-weight: 500;
-        font-size: 20px;
-        line-height: 120%;
-        letter-spacing: 0.02em;
-        color: #2E2F42;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+    letter-spacing: 0.02em;
+    color: #2E2F42;
 }
 
 p {
@@ -36,11 +47,36 @@ p {
         letter-spacing: 0.02em;
 }
 
+.container {
+    max-width: 1158px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+
 
 /* Header */
-.hero {
-    background-color: #2E2F42;
+
+.header {
+    border-bottom: 1px solid #e7e9fc;
 }
+.header-container {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+}
+
+.header-navigation {
+    display: flex;
+    gap: 76px;
+    align-items: center;
+}
+
+
 .logo {
 font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -48,39 +84,50 @@ font-family: "Raleway", sans-serif;
     line-height: 117%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-color: #4D5AE5;
+    color: #4D5AE5;
 }
 
 .header-logo-item {
-font-family: "Raleway", sans-serif;
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 117%;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 117%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
     color: #2E2F42;
 }
 
-
+.header-list {
+    display: flex;
+    gap: 40px;
+}
 
 .header-list-link {
-
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
-color: #2E2F42;
+    color: #2E2F42;
+    padding: 24px 0;
+    display: block;
 }
+
 .header-list-link:hover, .header-list-link:focus {
     color: #404BBF;
 }
 
 .header-adress {
     font-style: normal;
+    margin-left: auto;
+}
+
+.header-adress-list {
+    display: flex;
+    gap: 40px;
 }
 
 .header-adress-link {
-font-weight: 400;
+    font-weight: 400;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.02em;
@@ -88,15 +135,30 @@ font-weight: 400;
 }
 
 .header-adress-link:hover, .header-adress-link:focus {
-color: #404BBF;
+    color: #404BBF;
+}
+section {
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 
 
 /* hero */
+.hero {
+    background-color: #2E2F42;
+    padding-top: 188px;
+    padding-bottom: 188px;
+    display: block;
+}
+
+.hero-title {
+    margin: 0 auto;
+    max-width: 496px;
+}
 
 .hero-button {
-font-family: "Roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 150%;
@@ -104,15 +166,60 @@ font-family: "Roboto", sans-serif;
     color: #FFFFFF;
     background-color: #4D5AE5;
     cursor: pointer;
+    width: 169px;
+    height: 56px;
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    margin-top: 48px;
 }
 .hero-button:hover, .hero-button:focus {
     background-color: #404BBF;
 }
 
+/* FEAUTURES */
+
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.features-list {
+    display: flex;
+    gap: 24px;
+}
+
+.features-list-item {
+
+}
+
+.features-subtitle {
+    margin-bottom: 8px;
+}
+
+.features-text {
+    width: 264px;
+}
+
+
+
+
 /* Team */
+
+
 .team {
     background-color: #F4F4FD;
 }
+
 
 .team-title {
     font-weight: 700;
@@ -122,15 +229,27 @@ font-family: "Roboto", sans-serif;
     text-transform: capitalize;
     text-align: center;
     color: #2E2F42;
-    
+    margin-bottom: 72px;
+}
+
+.team-list {
+    display: flex;
+    gap: 24px;
 }
 
 .team-list-item {
     background-color: #FFFFFF;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    border-radius: 0 0 4px 4px;
+    padding: 0px 0px 32px 0px;
+    width: 264px;
+        height: 380px;
 }
 
 .team-subtitle {
     text-align: center;
+    margin-top: 32px;
+    margin-bottom: 8px;
 }
 
 .team-text {
@@ -138,6 +257,15 @@ font-family: "Roboto", sans-serif;
 }
 
 /* Our Portfolio */
+
+.portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 360px;
+    gap: 24px;
+}
+
+
 .portfolio-title {
 
     font-weight: 700;
@@ -147,30 +275,54 @@ font-family: "Roboto", sans-serif;
     text-transform: capitalize;
     text-align: center;
     color: #2E2F42;
+    margin-bottom: 72px;
 }
+
+.portfolio-list-item {
+    padding-bottom: 32px;
+    border: 1px solid #e7e9fc;
+    margin-top: 48px;
+    width: 360px;
+}
+
+.portfolio-subtitle {
+    margin-top: 32px;
+    margin-bottom: 8px;
+    margin-right: 16px;
+    padding-left: 16px;
+}
+.portfolio-text {
+    padding-left: 16px;
+}
+
 
 
 /* Footer */
+
+
+
 .footer {
     background-color: #2E2F42;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .footer-logo-item {
-  
-        font-weight: 700;
-        font-size: 18px;
-        line-height: 117%;
-        letter-spacing: 0.03em;
-        text-transform: uppercase;
-        color: #F4F4FD;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 117%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #F4F4FD;
 }
 .footer-text {
- 
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 150%;
-        letter-spacing: 0.02em;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.02em;
     color: #F4F4FD;
+    margin-top: 16px;
+    width: 264px;
 }
 
 
